@@ -2,3 +2,5 @@
 jupyter
 pandas
 matplotlib
+plotly
+plotly-express
