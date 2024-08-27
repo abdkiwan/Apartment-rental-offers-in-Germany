@@ -6,12 +6,12 @@ Before running the scripts, we need to create a virtual environment and install 
 - `python3 -m venv env`
 - On Linux : `source env/bin/activate` - On windows : `env\scripts\activate.bat`
 - `pip3 install -r requirements.txt`
-- `jupyter notebook` To run the experiments.ipynb file.
+- `jupyter notebook` To run the runs.ipynb file.
 
 # Scripts
-- experiments.ipynb: 
+- runs.ipynb: 
 This file has all the steps of data preparation and feature engineering, with explanations.
-It also contains the experiments with the machine learning algorithms are found in the jupyter notebook (experiments.ipynb)
+It also contains the experiments with the machine learning algorithms are found in the jupyter notebook.
 - ml_utils.py : it contains some helping functions related to machine learning algorithms.
 - data_utils.py : it contains some helping functions related to data preparation.
 
