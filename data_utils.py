@@ -2,12 +2,10 @@
 
 '''
 This script contains helping function for data preparation for training.
-Data preparation includes splitting data into train and test sets, and rescale data.
+Data preparation includes splitting data into train and test sets, and normalize data.
 '''
-import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-import numpy as np
 
 def prepare_data(df, target_col, columns_to_drop, with_normalization=False):
     '''

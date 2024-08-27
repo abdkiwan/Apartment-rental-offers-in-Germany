@@ -4,3 +4,5 @@ pandas
 matplotlib
 plotly
 plotly-express
+scikit-learn
+chromadb

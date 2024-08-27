@@ -48,13 +48,16 @@ I created two collections, one called 'description' to store the vectors of 'des
 and another one for 'facilities'.
 For every embedding vector, I used 'scoutId' column as an Id.
 
+I uploaded the database files into the link:
+https://drive.google.com/file/d/1E3iUffcNSL7-CPGiGmCDgrjw8cwNw05w/view?usp=sharing
+
 # Training models:
 I experimented with 2 different regression models (LinearRegression - DecisionTree).
 I chose these models for the following reasons:
 - They are regression models and appropriate to our task that is about predicting a continuous value.
 - They are easy to train.
 - Training time isn't long.
-- 
+
 ### Results:
 
 I did two main experiments:
@@ -67,13 +70,17 @@ I did two main experiments:
 | R2 score (test)  | 0.75                              | 0.83                                | 0.45                          | 0.69                            |
 
 ### Conclusions:
-We observe that r2 scores for the models when including text embeddings are higher than the models without embeddings.
+We observe that r2 scores for the models trained on text embeddings are higher than the models without embeddings.
 This is clear because the textual feature are providing rich information that contribute to the prediction of total rent values.
 
-
-# Packages:
-- For data preparation and visualization I used Pandas and Plotly.
-- For machine learning algorithms I used Scikit-learn package.
+## Improvement Strategies:
+- Using different sentence embedding models with a bigger embedding size.
+- Using better ML models like Random Forest Regressor and Gradient Boosting Regressor
+(I didn't experiment them since training time is long)
+- Using grid search for hyperparameter tuning.
+(This is partially implemented, but running them takes a long time)
+- Better handling of missing data.
+- Better translating of geographical data like cities and zip codes into features.
 
 
 
