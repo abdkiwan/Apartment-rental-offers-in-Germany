@@ -7,14 +7,14 @@ Data preparation includes splitting data into train and test sets, and rescale d
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-
+import numpy as np
 
 def prepare_data(df, target_col, columns_to_drop, with_normalization=False):
     '''
     This function extracts features and targets from data frame, splits data into train and test sets,
     and rescale the features (optional)
     '''
-    target = df[target_col]
+    target = np.log(df[target_col])
     features = df.drop(target_col, axis=1)
     features = df.drop(columns_to_drop, axis=1)
 
