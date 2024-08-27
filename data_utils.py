@@ -14,9 +14,9 @@ def prepare_data(df, target_col, columns_to_drop, with_normalization=False):
     This function extracts features and targets from data frame, splits data into train and test sets,
     and rescale the features (optional)
     '''
-    target = np.log(df[target_col])
+    target = df[target_col]
     features = df.drop(target_col, axis=1)
-    features = df.drop(columns_to_drop, axis=1)
+    features = features.drop(columns_to_drop, axis=1)
 
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.3, random_state=1)
 

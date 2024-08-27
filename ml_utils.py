@@ -13,7 +13,7 @@ from joblib import dump, load
 models = {
     "LinearRegression": LinearRegression,
     "DecisionTree": DecisionTreeRegressor,
-    "RandomForest": RandomForestRegressor
+    "RandomForest": RandomForestRegressor,
 }
 
 parameters = {
